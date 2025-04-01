@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Recipe</title>
+</head>
+<body>
+    <h1>Create a New Recipe</h1>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        
+        <div>
+            <label for="title">Title</label>
+            {{ form.title }}
+        </div>
+        
+        <div>
+            <label for="description">Description</label>
+            {{ form.description }}
+        </div>
+        
+        <div>
+            <label for="ingredients">Ingredients</label>
+            {{ form.ingredients }}
+        </div>
+        
+        <div>
+            <label for="instructions">Instructions</label>
+            {{ form.instructions }}
+        </div>
+        
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    
+    <a href="{{ url_for('recipes') }}">Back to Recipes</a>
+</body>
+</html>
